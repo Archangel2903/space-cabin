@@ -9,6 +9,49 @@
   min-width: 320px;
 }
 
-.main-slider {
+.section-head {
+  padding: 252px 0 200px;
+  background: url(../img/head-bg.png) no-repeat left -10px top -280px;
 
+  &__title {
+    position: relative;
+    margin: 0 0 45px;
+    font-size: 90px;
+    font-weight: 600;
+
+    &:after {
+      content: 'TM';
+      position: absolute;
+      top: 123px;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    max-width: 415px;
+  }
+}
+
+.section-clients {
+
+}
+
+.clients {
+  &__head {
+
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__body {
+
+  }
 }

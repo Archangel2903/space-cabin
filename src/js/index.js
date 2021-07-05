@@ -20,20 +20,9 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    $('.menu__item-link').hover(function () {
-        if ($(this).next('.menu__dropdown').length) {
-            $(this).next().slideDown(300);
-        }
-        else {
-            return false;
-        }
-    }, function () {
-        if ($(this).next('.menu__dropdown').length) {
-            $(this).next().slideUp(300);
-        }
-        else {
-            return false;
-        }
+    $('.toolbar-menu__switch').on('click', function () {
+        $('.toolbar').toggleClass('active');
+        $(this).next().toggleClass('opened');
     });
 
     // Lazy load observer

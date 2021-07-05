@@ -5,7 +5,8 @@ $main-third-color: blue;
 
 // colors
 $title-color: #111;
-$text-color: #333;
+$text-color: #1F1F1F;
+$link-hover: #39AFFD;
 $input-placeholder-color: #aaa;
 
 // fonts
@@ -27,3 +28,20 @@ $transition-base: all .3s ease 0s;
 //Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1440px
+);
