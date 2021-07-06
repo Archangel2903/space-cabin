@@ -20,9 +20,22 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    $('.toolbar-menu__switch').on('click', function () {
-        $('.toolbar').toggleClass('active');
+    let toolbar = $('.toolbar');
+    let burger = $('.toolbar-menu__switch');
+
+    burger.on('click', function (e) {
+        toolbar.toggleClass('active');
         $(this).next().toggleClass('opened');
+    });
+
+    toolbar.on('click', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', function (e) {
+        e.stopPropagation();
+        toolbar.removeClass('active');
+        burger.next().removeClass('opened');
     });
 
     // Lazy load observer

@@ -107,7 +107,7 @@ header.header {
     backdrop-filter: blur(120px);
     transform: translate(-50%, -33%) rotate3d(1, 0, 0, 90deg);
     transition: $transition-base;
-    transition-delay: .15s;
+    transition-delay: .2s;
     will-change: transform;
 
     &::before {
