@@ -306,6 +306,11 @@ iframe {
   border: none;
 }
 
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
 ::selection {
   text-shadow: none;
   color: $text-color;

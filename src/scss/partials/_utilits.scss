@@ -90,6 +90,28 @@
   }
 }
 
+%backdrop-blur {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+%bg-easy-blur {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@supports (backdrop-filter: blur()) {
+  %backdrop-blur {
+    background: rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(120px);
+    backdrop-filter: blur(120px);
+  }
+
+  %bg-easy-blur {
+    background: rgba(255, 255, 255, 0.35);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+  }
+}
+
 .title {
   position: relative;
   margin: 0;
@@ -97,6 +119,11 @@
   font-size: 60px;
   font-weight: $font-weight-sbold;
   line-height: 83px;
+
+  sup {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 .styler-text {
@@ -114,7 +141,7 @@
     left: 0;
     display: block;
     width: 4px;
-    height: calc(100% - 28px);
+    height: calc(100% - 25px);
     background: #ED9528;
     transform: translate(0, -50%);
   }
@@ -122,6 +149,72 @@
 
 .blur-text {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(40px);
+  border: 1px solid #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+  @extend %bg-easy-blur;
+}
+
+.btn {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none !important;
+  outline: 0 !important;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+
+  &-lg {
+    padding: 27px 30px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+    outline: 0 !important;
+
+    svg {
+      width: 25px;
+      height: 25px;
+      margin-left: 25px;
+    }
+  }
+
+  &-sm {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+    outline: 0 !important;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+    }
+  }
+
+  &-primary {
+    background: linear-gradient(235.38deg, #39AFFD 4.23%, #3A76FF 95.84%);
+    background-size: 100%;
+    background-position: 0 0;
+
+    &:hover {
+      background-size: 200%;
+      background-position: 50% 50%;
+    }
+  }
+
+  &-more {
+    padding: 0 0 10px;
+    border-bottom: 1px solid #1f1f1f;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+
+    &:hover {
+      border-color: $link-hover;
+      color: $link-hover;
+    }
+  }
 }

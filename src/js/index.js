@@ -20,14 +20,18 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    $('.faq__toggler').on('click', function () {
+        $(this).closest('.faq__box').toggleClass('opened');
+        $(this).closest('.faq__box').find('.faq__box-body').slideToggle(300);
+    });
+
     let toolbar = $('.toolbar');
     let burger = $('.toolbar-menu__switch');
 
-    burger.on('click', function (e) {
+    burger.on('click', function () {
         toolbar.toggleClass('active');
         $(this).next().toggleClass('opened');
     });
-
     toolbar.on('click', function (e) {
         e.stopPropagation();
     });
