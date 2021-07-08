@@ -6,7 +6,6 @@ import 'jquery-ui/ui/effect'
 import 'bootstrap';
 import 'popper.js';
 
-
 $(window).on('load', function () {
     let b = $('body');
 
@@ -20,6 +19,17 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    let maxMqlXXL = matchMedia('(max-width: 1440px)');
+
+    maxMqlXXL.addListener(function () {
+        if (maxMqlXXL.matches) {
+            console.log('Ширина экрана равен или меньше 1440px');
+        }
+        else {
+            console.log('Ширина экрана больше 1440px');
+        }
+    });
+
     $('.faq__toggler').on('click', function () {
         $(this).closest('.faq__box').toggleClass('opened');
         $(this).closest('.faq__box').find('.faq__box-body').slideToggle(300);
