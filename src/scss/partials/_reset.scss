@@ -80,6 +80,10 @@ td {
 form {
   padding: 0;
   margin: 0;
+
+  label {
+    margin: 0;
+  }
 }
 
 button, input, textarea {
@@ -104,25 +108,25 @@ button, input, textarea {
 }
 
 ::-webkit-input-placeholder {
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-medium;
   font-size: 1rem;
   color: $input-placeholder-color;
   transition: $transition-base;
 }
 
 ::-webkit-textarea-placeholder {
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-medium;
   font-size: 1rem;
   color: $input-placeholder-color;
   transition: $transition-base;
 }
 
 input {
+  font-family: $font-family-base;
   transition: $transition-base;
 
   &[type="text"], &[type="email"], &[type="password"], &[type="number"], &[type="tel"], &[type="search"], &[type="datetime"], &[type="url"] {
     cursor: auto;
-    padding: 0 5px;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
 
@@ -166,13 +170,13 @@ input {
   }
 
   &::-moz-placeholder {
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-medium;
     font-size: 1rem;
     color: $input-placeholder-color;
     transition: $transition-base;
   }
   &::-ms-placeholder {
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-medium;
     font-size: 1rem;
     color: $input-placeholder-color;
     transition: $transition-base;
@@ -187,7 +191,7 @@ textarea {
   padding: 0 5px;
 
   &:focus {
-    background: none;
+    background: transparent;
 
     &::-webkit-input-placeholder {
       color: transparent;
