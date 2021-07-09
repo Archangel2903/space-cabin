@@ -6,7 +6,6 @@ import 'jquery-ui/ui/effect'
 import 'bootstrap';
 import 'popper.js';
 
-
 $(window).on('load', function () {
     let b = $('body');
 
@@ -19,14 +18,71 @@ $(window).on('load', function () {
     b.removeClass('loaded');
 });
 
+const mqlMin = {
+    start: matchMedia('(min-width: 320px)'),
+    sm: matchMedia('(min-width: 576px)'),
+    md: matchMedia('(min-width: 768px)'),
+    lg: matchMedia('(min-width: 992px)'),
+    xl: matchMedia('(min-width: 1200px)'),
+    xxl: matchMedia('(min-width: 1440px)'),
+}
+const mqlMax = {
+    xxl: matchMedia('(max-width: 1439px)'),
+    xl: matchMedia('(max-width: 1199px)'),
+    lg: matchMedia('(max-width: 991px)'),
+    md: matchMedia('(max-width: 767px)'),
+    sm: matchMedia('(max-width: 575px)'),
+    xs: matchMedia('(max-width: 394px)'),
+}
+
 $(function () {
+    $('.menu__list-item').each(function (i, e) {
+        let link = $(e).find('.menu__item-link').attr('href');
+        let linkText = $(e).find('.menu__item-link').text();
+
+        $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link replacement">' + linkText + '</a>');
+
+        if ($(e).find('.menu__dropdown').length) {
+            $(e).find('.menu__dropdown .menu__dropdown-item').each(function (i, e) {
+                let link = $(e).find('.menu__dropdown-link').attr('href');
+                let linkText = $(e).find('.menu__dropdown-link').text();
+
+                $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link sub-link replacement">' + linkText + '</a>');
+            });
+        }
+    });
+
+    let body = $('body');
     let toolbar = $('.toolbar');
     let burger = $('.toolbar-menu__switch');
 
-    burger.on('click', function (e) {
-        toolbar.toggleClass('active');
-        $(this).next().toggleClass('opened');
-    });
+    function bodyLock() {
+        if (mqlMax.xxl.matches) {
+            burger.unbind('click');
+            burger.on('click', function () {
+                body.toggleClass('lock');
+                toolbar.toggleClass('active');
+                $(this).next().toggleClass('opened');
+            });
+
+            if ($('.toolbar-menu__dropdown').hasClass('opened')) {
+                body.addClass('lock');
+            }
+        }
+        else {
+            burger.unbind('click');
+            burger.on('click', function () {
+                body.removeClass('lock');
+                toolbar.toggleClass('active');
+                $(this).next().toggleClass('opened');
+            });
+
+            body.removeClass('lock');
+        }
+    }
+
+    mqlMax.xxl.addListener(bodyLock);
+    bodyLock();
 
     toolbar.on('click', function (e) {
         e.stopPropagation();
@@ -36,7 +92,16 @@ $(function () {
         e.stopPropagation();
         toolbar.removeClass('active');
         burger.next().removeClass('opened');
+        $('body').removeClass('lock');
     });
+
+    /* FAQ list */
+    if ($('.faq__toggler').length) {
+        $('.faq__toggler').on('click', function () {
+            $(this).closest('.faq__box').toggleClass('opened');
+            $(this).closest('.faq__box').find('.faq__box-body').slideToggle(300);
+        });
+    }
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
