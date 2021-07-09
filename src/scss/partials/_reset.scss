@@ -21,6 +21,11 @@ html, body {
   font-family: $font-family-base;
   font-size: $font-size-default;
   background: #E5E5E5;
+
+  &.lock {
+    position: fixed;
+    width: 100%;
+  }
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
@@ -311,7 +316,7 @@ iframe {
 }
 
 img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
