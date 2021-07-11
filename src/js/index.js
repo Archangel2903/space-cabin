@@ -61,8 +61,9 @@ $(function () {
             burger.unbind('click');
             burger.on('click', function () {
                 body.toggleClass('lock');
-                toolbar.toggleClass('active');
+                $(this).toggleClass('opened');
                 $(this).next().toggleClass('opened');
+                toolbar.toggleClass('active');
             });
 
             if ($('.toolbar-menu__dropdown').hasClass('opened')) {
@@ -73,8 +74,9 @@ $(function () {
             burger.unbind('click');
             burger.on('click', function () {
                 body.removeClass('lock');
-                toolbar.toggleClass('active');
+                $(this).toggleClass('opened');
                 $(this).next().toggleClass('opened');
+                toolbar.toggleClass('active');
             });
 
             body.removeClass('lock');

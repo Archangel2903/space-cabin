@@ -310,13 +310,61 @@ header.header {
     outline: none !important;
     z-index: 5;
 
+    &-line {
+      position: absolute;
+      top: 33%;
+      left: 30%;
+      display: block;
+      width: 17px;
+      height: 2px;
+      background: #1f1f1f;
+      border-radius: 25px;
+      opacity: 1;
+      visibility: visible;
+      transition: $transition-base;
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #1f1f1f;
+      border-radius: 25px;
+      transform: translate(-50%, -50%);
+      transition: $transition-base;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 33%;
+    }
+
     &:hover {
       border-color: #39AFFD;
     }
 
-    svg {
-      width: 24px;
-      height: 24px;
+    &.opened {
+      border-color: #39AFFD;
+
+      .toolbar-menu__switch-line {
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &::before {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        bottom: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+      }
     }
   }
 
