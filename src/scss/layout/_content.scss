@@ -625,3 +625,16 @@
     display: none;
   }
 }
+
+/* BREADCRUMBS */
+.section-breadcrumb {}
+
+.breadcrumbs {
+  &__item {
+    font-size: 14px;
+
+    &+ .breadcrumbs__item::before {
+      content: '/ ';
+    }
+  }
+}

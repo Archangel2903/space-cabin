@@ -93,6 +93,7 @@ $(function () {
     $(document).on('click', function (e) {
         e.stopPropagation();
         toolbar.removeClass('active');
+        burger.removeClass('opened');
         burger.next().removeClass('opened');
         $('body').removeClass('lock');
     });
