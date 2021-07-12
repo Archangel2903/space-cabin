@@ -10,9 +10,9 @@ footer.footer {
   overflow: hidden;
 
   .background-shape {
-    top: 33%;
-    right: 33%;
-    filter: blur(400px);
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .logo {

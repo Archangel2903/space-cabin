@@ -90,13 +90,11 @@
 
 .background-shape {
   position: absolute;
-  top: auto;
+  top: 50%;
   right: auto;
   bottom: auto;
   left: auto;
-  width: 800px;
-  height: 800px;
-  filter: blur(600px);
+  transform: translate(0, -50%);
 }
 
 .section-bg {

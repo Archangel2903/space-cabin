@@ -14,13 +14,14 @@
 .section-head {
   padding: 40px 0;
   margin: 0 0 100px;
-  background: url(../img/lines.svg) no-repeat center center;
+  background: url(../img/lines.svg) no-repeat center top -100px;
+  -webkit-background-size: cover;
+  background-size: cover;
 
   .background-shape {
-    top: 0;
-    right: 0;
-    width: 800px;
-    height: 800px;
+    top: 50%;
+    right: -25%;
+    transform: translate(0, -50%);
   }
 
   &__title {
@@ -154,7 +155,7 @@
 /* SECTION CABIN */
 .section-cabin {
   margin: 0 0 317px;
-  background: url(../img/lines-circle.svg) no-repeat center right;
+  background: url(../img/lines-circle.svg) no-repeat center right 250px;
   background-size: contain;
 
   .background-shape {
@@ -258,6 +259,10 @@
 /* SECTION VIDEO */
 .section-video {
   margin: 0 0 95px;
+
+  .background-shape {
+    left: -40%;
+  }
 
   &__title {
 
@@ -437,8 +442,8 @@
   background: url(../img/lines-circle.svg) no-repeat center center;
 
   .background-shape {
-    top: 0;
-    right: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__title {
@@ -574,8 +579,9 @@
   margin: 0 0 130px;
 
   .background-shape {
-    top: 0;
-    right: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
