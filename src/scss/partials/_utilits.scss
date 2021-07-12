@@ -247,7 +247,9 @@
 }
 
 .form-wrap {
-  padding: 30px;
+  max-width: 510px;
+  padding: 15px;
+  margin: 0 auto;
   @extend %bg-easy-blur;
 }
 
@@ -333,7 +335,7 @@
 
 .form-control {
   height: auto;
-  padding: 20px;
+  padding: 15px;
   border: none;
   border-radius: 0;
   box-shadow: none !important;
