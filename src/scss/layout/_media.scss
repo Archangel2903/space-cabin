@@ -316,6 +316,7 @@
 
 @include media-breakpoint-up(xl) {
   .form-wrap {
+    max-width: none;
     margin: 0;
   }
 

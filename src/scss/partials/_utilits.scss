@@ -88,6 +88,17 @@
   position: relative;
 }
 
+.background-shape {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 800px;
+  height: 800px;
+  filter: blur(600px);
+}
+
 .section-bg {
   position: absolute;
   top: 0;

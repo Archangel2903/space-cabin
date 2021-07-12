@@ -14,7 +14,14 @@
 .section-head {
   padding: 40px 0;
   margin: 0 0 100px;
-  //background: url('../img/head-bg.png') no-repeat center center;
+  background: url(../img/lines.svg) no-repeat center center;
+
+  .background-shape {
+    top: 0;
+    right: 0;
+    width: 800px;
+    height: 800px;
+  }
 
   &__title {
     position: relative;
@@ -147,6 +154,13 @@
 /* SECTION CABIN */
 .section-cabin {
   margin: 0 0 317px;
+  background: url(../img/lines-circle.svg) no-repeat center right;
+  background-size: contain;
+
+  .background-shape {
+    top: 0;
+    right: 0;
+  }
 
   &__title {
     max-width: 750px;
@@ -420,6 +434,12 @@
 /* SECTION TESTIMONIALS */
 .section-testimonials {
   margin: 0 0 70px;
+  background: url(../img/lines-circle.svg) no-repeat center center;
+
+  .background-shape {
+    top: 0;
+    right: 25%;
+  }
 
   &__title {
     margin: 0 0 35px;
@@ -496,6 +516,12 @@
 .section-blog {
   margin: 0 0 125px;
 
+  .background-shape {
+    top: 0;
+    width: 100%;
+    filter: blur(200px);
+  }
+
   &__title {
     margin: 0 0 70px;
     text-align: center;
@@ -546,6 +572,11 @@
 /* SECTION REQUEST */
 .section-request {
   margin: 0 0 130px;
+
+  .background-shape {
+    top: 0;
+    right: 25%;
+  }
 }
 
 .request {
