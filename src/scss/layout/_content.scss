@@ -534,6 +534,8 @@
 }
 
 .blog {
+  overflow: hidden;
+
   &__box {
     padding: 15px;
     margin: 0 0 30px;
@@ -572,6 +574,104 @@
       line-height: 30px;
     }
   }
+
+  &.minimized {
+    height: 638px;
+  }
+
+  &__toggle {
+    &-button {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 690px;
+      padding: 0 0 30px;
+      border: none;
+      border-bottom: 1px solid #c4c4c4;
+      background: none;
+      margin: 60px auto 0;
+      overflow: hidden;
+      font-size: 20px;
+      font-weight: 600;
+
+      svg {
+        width: 36px;
+        height: 36px;
+        transform: rotate3d(0, 0, 1, 90deg);
+        transition: $transition-base;
+      }
+
+      &.opened {
+        svg {
+          transform: rotate3d(0, 0, 1, -90deg);
+        }
+      }
+    }
+  }
+}
+
+.latest-news {
+  margin: 0 0 223px;
+
+  &__box {
+
+  }
+
+  &__pic {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+    width: 100%;
+    max-width: 930px;
+    padding: 30px;
+    @extend %bg-easy-blur;
+    background: rgba(255, 255, 255, 0.75);
+    transform: translate(-50%, 0);
+
+    &-footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+
+      .ico {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+
+  &__date {
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  &__name {
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin: 0 0 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-shadow: 0 10px 20px rgba(41, 41, 42, 0.07);
+  }
+
+  &__link {}
 }
 
 /* SECTION REQUEST */
@@ -627,7 +727,9 @@
 }
 
 /* BREADCRUMBS */
-.section-breadcrumb {}
+.section-breadcrumb {
+  margin: 0 0 120px;
+}
 
 .breadcrumbs {
   &__item {
