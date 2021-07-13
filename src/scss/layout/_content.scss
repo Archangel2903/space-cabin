@@ -753,6 +753,10 @@
 /* SECTION NEWS */
 .section-news {
   margin: 0 0 275px;
+
+  .background-shape {
+    top: 10%;
+  }
 }
 
 .news {
@@ -803,6 +807,39 @@
         opacity: 0.1;
         transform: scale(4) rotate(-15deg);
       }
+    }
+  }
+}
+
+/* SECTION BENEFITS */
+.section-benefits {
+
+}
+
+.benefits {
+  &__title {
+
+  }
+
+  &__video {
+    &-text {
+
+    }
+  }
+
+  &__box {
+    &-ico {
+      svg {
+
+      }
+    }
+
+    &-name {
+
+    }
+
+    &-text {
+
     }
   }
 }
