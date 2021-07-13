@@ -816,30 +816,52 @@
 
 }
 
-.benefits {
+.advantages {
   &__title {
-
+    margin: 0 0 50px;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 73px;
+    text-align: center;
   }
 
   &__video {
-    &-text {
+    height: 464px;
+    padding: 30px;
+    @extend %bg-easy-blur;
 
+    &-text {
+      max-width: 1170px;
+      margin: 66px 0;
+      font-size: 30px;
+      line-height: 48px;
     }
   }
 
   &__box {
+    height: 100%;
+    padding: 40px;
+    margin: 0 0 30px;
+    @extend %bg-easy-blur;
+
     &-ico {
+      margin: 0 0 10px;
+
       svg {
 
       }
     }
 
     &-name {
-
+      margin: 0 0 10px;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 48px;
     }
 
     &-text {
-
+      font-size: 18px;
+      line-height: 30px;
     }
   }
 }
