@@ -356,3 +356,18 @@
   box-shadow: none !important;
   @extend %bg-easy-blur;
 }
+
+.list-style {
+  padding-left: 30px;
+  margin: 0 0 30px;
+  list-style: square;
+
+  li {
+    font-size: 18px;
+    line-height: 30px;
+
+    &::marker {
+      color: #3a76ff;
+    }
+  }
+}

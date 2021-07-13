@@ -52,10 +52,13 @@ header.header {
     align-content: center;
     padding: 0;
     margin: 0;
+    list-style: none;
   }
 
   &__list-item {
     position: relative;
+    margin: 0;
+
     &:not(:last-child) {
       margin-right: 49px;
     }
@@ -115,6 +118,7 @@ header.header {
 
     &-list {
       padding: 20px;
+      list-style: none;
     }
 
     &-item {

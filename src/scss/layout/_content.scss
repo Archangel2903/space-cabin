@@ -499,6 +499,15 @@
     position: relative;
     margin: 0 0 24px;
     line-height: 32px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 12px;
+      height: 10px;
+      opacity: 0.3;
+    }
   }
 
   &__author {
@@ -737,6 +746,63 @@
 
     &+ .breadcrumbs__item::before {
       content: '/ ';
+    }
+  }
+}
+
+/* SECTION NEWS */
+.section-news {
+  margin: 0 0 275px;
+}
+
+.news {
+  &__date {
+    margin: 0 0 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__name {
+    margin: 0 0 50px;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 73px;
+    text-align: center;
+  }
+
+  &__pic {
+    img {
+      width: 100%;
+      margin: 0 0 80px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 80px;
+    font-size: 18px;
+    line-height: 30px;
+
+    &_lg {
+      margin: 0 0 40px;
+      font-size: 30px;
+      line-height: 48px;
+    }
+
+    &-quote {
+      position: relative;
+      max-width: 764px;
+      margin: 60px auto 140px;
+      font-size: 30px;
+      line-height: 55px;
+
+      &::before {
+        content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNS45Mjk4IDIuMTg2NTVDMTMuNTQzOSAzLjQwMTMxIDEyLjM1MSA0LjgyODYzIDEyLjM1MSA2LjQ2ODU1QzEzLjM2NzkgNi41OTAwMiAxNC4yMDg4IDcuMDIwMjQgMTQuODczOCA3Ljc1OTIyQzE1LjUzODcgOC40OTgyIDE1Ljg3MTIgOS4zNTM1NyAxNS44NzEyIDEwLjMyNTRDMTUuODcxMiAxMS4zNTc5IDE1LjU0ODUgMTIuMjI4NSAxNC45MDMxIDEyLjkzNzFDMTQuMjU3NyAxMy42NDU3IDEzLjQ0NjEgMTQgMTIuNDY4MyAxNEMxMS4zNzMxIDE0IDEwLjQyNDYgMTMuNTM5NCA5LjYyMjc5IDEyLjYxODJDOC44MjA5NiAxMS42OTcgOC40MjAwNSAxMC41Nzg1IDguNDIwMDUgOS4yNjI0N0M4LjQyMDA1IDUuMzE0NTEgMTAuNTUxNyAyLjIyNzA1IDE0LjgxNTEgMEwxNS45Mjk4IDIuMTg2NTVaTTcuNTA5NzggMi4xODY1NUM1LjEwNDI5IDMuNDAxMzEgMy45MDE1NiA0LjgyODYzIDMuOTAxNTYgNi40Njg1NUM0LjkzODA4IDYuNTkwMDIgNS43ODg3OCA3LjAyMDI0IDYuNDUzNzIgNy43NTkyMkM3LjExODY1IDguNDk4MiA3LjQ1MTExIDkuMzUzNTcgNy40NTExMSAxMC4zMjU0QzcuNDUxMTEgMTEuMzU3OSA3LjEyMzU0IDEyLjIyODUgNi40NjgzOCAxMi45MzcxQzUuODEzMjMgMTMuNjQ1NyA0Ljk5Njc1IDE0IDQuMDE4OSAxNEMyLjkyMzcyIDE0IDEuOTgwMTIgMTMuNTM5NCAxLjE4ODA3IDEyLjYxODJDMC4zOTYwMiAxMS42OTcgMCAxMC41Nzg1IDAgOS4yNjI0N0MwIDUuMzE0NTEgMi4xMjE4OCAyLjIyNzA1IDYuMzY1NzEgMEw3LjUwOTc4IDIuMTg2NTVaIgogICAgICAgICAgZmlsbD0iIzI3NUZBMSIvPgo8L3N2Zz4K);
+        position: absolute;
+        top: -70px;
+        left: -35px;
+        opacity: 0.1;
+        transform: scale(4) rotate(-15deg);
+      }
     }
   }
 }

@@ -55,6 +55,7 @@ footer.footer {
   padding: 0;
   margin: 0;
   text-align: center;
+  list-style: none;
 
   &__item {
     width: 50%;
@@ -73,6 +74,7 @@ footer.footer {
 .footer-contacts {
   padding: 0;
   margin: 0;
+  list-style: none;
 
   &__row {
     display: flex;

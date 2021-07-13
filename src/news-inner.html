@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>News</title>
+    <title>News article</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
@@ -221,12 +221,13 @@
             <div class="container">
                 <div class="breadcrumbs">
                     <a href="/" class="breadcrumbs__item">Home</a>
-                    <span class="breadcrumbs__item">News</span>
+                    <a href="news.html" class="breadcrumbs__item">News</a>
+                    <span class="breadcrumbs__item">Rééduca Paris 2021</span>
                 </div>
             </div>
         </div>
 
-        <div class="section section-blog">
+        <div class="section section-news">
             <svg class="background-shape" width="1684" height="1664" viewBox="0 0 1684 1664" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f)">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1277.81 879.163C1284.23 970.681 1299.21 1079.07 1234.59 1144.15C1170.11 1209.08 1059.6 1167.45 970.586 1188.55C892.414 1207.08 823.659 1282.34 746.533 1259.84C669.224 1237.3 649.39 1138.66 595.195 1079.06C531.031 1008.5 407.878 974.276 400.391 879.163C392.982 785.041 492.486 719.03 561.812 654.992C619.056 602.116 693.34 582.651 761.756 545.368C851.557 496.431 924.896 381.069 1024.85 402.663C1123.14 423.899 1152.06 551.019 1199.23 639.885C1239.58 715.887 1271.79 793.312 1277.81 879.163Z" fill="url(#paint0_angular)" fill-opacity="0.25"/>
@@ -244,183 +245,76 @@
                 </defs>
             </svg>
 
-            <div class="container">
-                <h2 class="section-blog__title title">Recent news</h2>
+            <div class="news container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="news__date">Published June 22, 2021</p>
+                        <p class="news__name">Rééduca Paris 2021</p>
 
-                <div class="latest-news row">
-                    <div class="col">
-                        <div class="latest-news__box">
-                            <picture class="latest-news__pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/news-img.png') %>" title="" alt="">
-                            </picture>
+                        <picture class="news__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/news-img.png') %>" title="" alt="">
+                        </picture>
 
-                            <div class="latest-news__content">
-                                <p class="latest-news__date">22.06.2021</p>
-                                <p class="latest-news__name">Rééduca Paris 2021</p>
-                                <p class="latest-news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                    turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer turpis...Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer turpis...</p>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="news__text news__text_lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing eros eget diam sed. Sagittis ut sed ut nam lobortis cursus suspendisse blandit morbi</p>
 
-                                <div class="latest-news__content-footer">
-                                    <a href="#more" class="latest-news__link btn btn-more">Read more</a>
-
-                                    <svg class="ico share-ico">
-                                        <use xlink:href="img/spritemap.svg#sprite-share"></use>
-                                    </svg>
-                                </div>
+                                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et sed sed. Tristique iaculis vel fermentum ullamcorper. Gravida sed pretium nunc quis sed vestibulum condimentum arcu blandit. Elementum, vel sodales lectus amet, enim egestas. Vel, in dolor, pulvinar morbi lorem ipsum. Adipiscing volutpat ut vestibulum elementum. Massa sit quisque volutpat tincidunt sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et sed sed.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="blog minimized row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-1.png') %>" title="" alt="">
-                            </picture>
+                <div class="row">
+                    <div class="col-md-6">
+                        <picture class="news__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/article-img01.png') %>" title="" alt="">
+                        </picture>
 
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">Rééduca Paris 2021</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
+                        <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et
+                            sed sed. Tristique iaculis vel fermentum ullamcorper. Gravida sed pretium nunc quis sed vestibulum condimentum arcu blandit. Elementum, vel
+                            sodales lectus amet, enim egestas. Vel, in dolor, pulvinar morbi lorem ipsum. Adipiscing volutpat ut vestibulum elementum. Massa sit quisque
+                            volutpat tincidunt sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in.
+                            Turpis sit et sed sed.</p>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-2.png') %>" title="" alt="">
-                            </picture>
+                    <div class="col-md-6">
+                        <picture class="news__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/article-img02.png') %>" title="" alt="">
+                        </picture>
 
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">New cryosauna in Taiwan</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-3.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">Rééduca Paris 2021</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-1.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">Rééduca Paris 2021</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-2.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">New cryosauna in Taiwan</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-3.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">Rééduca Paris 2021</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-1.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">Rééduca Paris 2021</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-2.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">New cryosauna in Taiwan</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog__box">
-                            <picture class="blog__box-pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-box-3.png') %>" title="" alt="">
-                            </picture>
-
-                            <p class="blog__box-date">22.06.2021</p>
-                            <p class="blog__box-name">Rééduca Paris 2021</p>
-                            <p class="blog__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique urna fusce scelerisque mattis dui integer
-                                turpis...</p>
-                            <div class="blog__box-footer">
-                                <a href="#more" class="blog__box-link btn btn-more">Read more</a>
-                            </div>
-                        </div>
+                        <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et
+                            sed sed. Tristique iaculis vel fermentum ullamcorper. Gravida sed pretium nunc quis sed vestibulum condimentum arcu blandit. Elementum, vel
+                            sodales lectus amet, enim egestas. Vel, in dolor, pulvinar morbi lorem ipsum. Adipiscing volutpat ut vestibulum elementum. Massa sit quisque
+                            volutpat tincidunt sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in.
+                            Turpis sit et sed sed.</p>
                     </div>
                 </div>
 
-                <div class="blog__toggle">
-                    <button class="blog__toggle-button">Show more <svg><use xlink:href="img/spritemap.svg#sprite-arrow_black"></use></svg></button>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="news__text-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing eros eget diam sed. Sagittis ut sed ut nam
+                            lobortis cursus suspendisse blandit morbi</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et sed sed. Tristique iaculis vel fermentum ullamcorper. Gravida sed pretium nunc quis sed vestibulum condimentum arcu blandit. Elementum, vel sodales lectus amet, enim egestas. Vel, in dolor, pulvinar morbi lorem ipsum. Adipiscing volutpat ut vestibulum elementum. Massa sit quisque volutpat tincidunt sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et sed sed.</p>
+
+                        <p class="news__text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis
+                            sit et sed sed. Tristique iaculis vel fermentum ullamcorper. Gravida sed pretium nunc quis sed vestibulum condimentum arcu blandit</p>
+
+                        <ul class="list-style">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elitTurpis sit et sed sed. Tristique iaculis vel fermentum ullamcorper.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elitTurpis sit et sed sed. Tristique iaculis vel fermentum ullamcorper.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare vulputate a consequat quis venenatis, in. Turpis sit et sed sed. Tristique iaculis vel fermentum ullamcorper. Gravida sed pretium nunc quis sed vestibulum condimentum arcu blandit. Elementum, vel sodales lectus amet, enim egestas. Vel, in dolor, pulvinar morbi lorem ipsum. Adipiscing volutpat ut vestibulum elementum.</p>
+                    </div>
                 </div>
             </div>
         </div>

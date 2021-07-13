@@ -281,6 +281,14 @@
         transform: translate(0, -50%);
       }
     }
+
+    &__text {
+      svg {
+        left: -30px;
+        width: 16px;
+        height: 14px;
+      }
+    }
   }
 
   /* FOOTER */
@@ -464,7 +472,7 @@
 
     &__dropdown-link {
       width: auto;
-      margin: 0;
+      margin: 0 !important;
       text-align: left;
 
       &.replacement {
