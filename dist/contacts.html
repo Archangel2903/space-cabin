@@ -5,8 +5,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.2cbc9361c9ecfd544601.min.css" rel="stylesheet"></head>
+    <title>Contacts</title>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.3bf257fd8bb540729e44.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -225,6 +225,90 @@
                 </div>
             </div>
         </div>
+
+        <div class="section section-map">
+            <div id="map"></div>
+        </div>
+
+        <div class="section section-contact">
+            <div class="contact container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-wrap">
+                            <div class="contact-info">
+                                <p class="contact-info__title">Contact form</p>
+
+                                <div class="contact-info__box">
+                                    <p class="contact-info__box-name">Sales manager:</p>
+                                </div>
+
+                                <div class="contact-info__box">
+                                    <p class="contact-info__box-name">Telephone numbers:</p>
+                                </div>
+
+                                <div class="contact-info__box">
+                                    <p class="contact-info__box-name">Email:</p>
+                                </div>
+                            </div>
+
+                            <form action="" method="post" class="request__form form">
+                                <div class="row form-group">
+                                    <label class="col">
+                                        <span class="form__name-input">Name *</span>
+                                        <input type="text" class="form__input form-control" placeholder="Enter your name">
+                                    </label>
+                                </div>
+
+                                <div class="row form-group">
+                                    <label class="col">
+                                        <span class="form__name-input">Email *</span>
+                                        <input type="email" class="form__input form-control" placeholder="Enter your email">
+                                    </label>
+                                </div>
+
+                                <div class="row form-group">
+                                    <label class="col">
+                                        <span class="form__name-input">Country *</span>
+                                        <input type="text" class="form__input form-control" placeholder="Enter your country">
+                                    </label>
+                                </div>
+
+                                <div class="row form-group">
+                                    <label class="col">
+                                        <span class="form__name-input">Telephone number *</span>
+                                        <input type="tel" class="form__input form-control" placeholder="Enter your phone number">
+                                    </label>
+                                </div>
+
+                                <div class="row form-group">
+                                    <label class="col">
+                                        <span class="form__name-input">Message *</span>
+                                        <textarea name="form-message" id="user_question" cols="30" rows="10" class="form__input form__input_textarea form-control"
+                                                  placeholder="Tell us what do you want to know"></textarea>
+                                    </label>
+                                </div>
+
+                                <div class="row form-group">
+                                    <label class="col">
+                                        <input type="checkbox" class="d-none">
+                                        <span class="form__check-wrap">
+                                            <span class="form__check-box"></span>
+                                            <span class="form__check-text">I am not a robot</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="form__submit btn btn-primary btn-block d-flex flex-row flex-wrap justify-content-between">Send a request
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- CONTENT END -->
 
@@ -232,7 +316,9 @@
     <footer class="footer">
         <svg class="background-shape" width="1684" height="1664" viewBox="0 0 1684 1664" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1277.81 879.163C1284.23 970.681 1299.21 1079.07 1234.59 1144.15C1170.11 1209.08 1059.6 1167.45 970.586 1188.55C892.414 1207.08 823.659 1282.34 746.533 1259.84C669.224 1237.3 649.39 1138.66 595.195 1079.06C531.031 1008.5 407.878 974.276 400.391 879.163C392.982 785.041 492.486 719.03 561.812 654.992C619.056 602.116 693.34 582.651 761.756 545.368C851.557 496.431 924.896 381.069 1024.85 402.663C1123.14 423.899 1152.06 551.019 1199.23 639.885C1239.58 715.887 1271.79 793.312 1277.81 879.163Z" fill="url(#paint0_angular)" fill-opacity="0.25"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1277.81 879.163C1284.23 970.681 1299.21 1079.07 1234.59 1144.15C1170.11 1209.08 1059.6 1167.45 970.586 1188.55C892.414 1207.08 823.659 1282.34 746.533 1259.84C669.224 1237.3 649.39 1138.66 595.195 1079.06C531.031 1008.5 407.878 974.276 400.391 879.163C392.982 785.041 492.486 719.03 561.812 654.992C619.056 602.116 693.34 582.651 761.756 545.368C851.557 496.431 924.896 381.069 1024.85 402.663C1123.14 423.899 1152.06 551.019 1199.23 639.885C1239.58 715.887 1271.79 793.312 1277.81 879.163Z"
+                      fill="url(#paint0_angular)" fill-opacity="0.25"/>
             </g>
             <defs>
                 <filter id="filter0_f" x="0" y="0" width="1684" height="1664" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -240,7 +326,8 @@
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                     <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur"/>
                 </filter>
-                <radialGradient id="paint0_angular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(943.288 882.222) rotate(-180) scale(340.711 381.78)">
+                <radialGradient id="paint0_angular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(943.288 882.222) rotate(-180) scale(340.711 381.78)">
                     <stop offset="0.504455" stop-color="#00CF85"/>
                     <stop offset="1" stop-color="#0078CF"/>
                 </radialGradient>
@@ -328,7 +415,8 @@
 
                             <a href="#youtube" class="social__link">
                                 <svg width="39" height="27" viewBox="0 0 39 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.9199 26.9634C8.59926 26.8286 6.0989 26.7073 4.56203 26.3907C3.52224 26.1803 2.61866 25.7132 1.95613 25.0357C1.44408 24.5229 1.03686 23.7406 0.720931 22.6551C0.449928 21.7508 0.34438 20.9985 0.193902 19.1606C-0.0364502 15.0129 -0.0913638 11.6218 0.193902 7.8327C0.429246 5.74027 0.543352 3.25632 2.10661 1.80716C2.84473 1.12894 3.70338 0.692484 4.66758 0.512053C6.17379 0.226074 12.5908 0 19.234 0C25.8621 0 32.2934 0.226074 33.8011 0.512053C35.0056 0.738127 36.1352 1.41563 36.7985 2.28926C38.2248 4.53288 38.2498 7.32279 38.3946 9.50508C38.4545 10.5449 38.4545 16.4492 38.3946 17.489C38.1692 20.9378 37.988 22.1581 37.476 23.4232C37.1594 24.222 36.8891 24.6434 36.4212 25.1106C35.6875 25.8294 34.7521 26.3076 33.7397 26.4813C27.4047 26.9577 22.0253 27.0611 15.9199 26.9634V26.9634ZM25.6211 13.1051C22.0966 11.2217 18.7219 9.47512 15.2723 7.66725V18.4831C18.9023 16.5098 22.7292 14.7019 25.636 13.0902L25.6211 13.1051Z" fill="#CD201F"/>
+                                    <path d="M15.9199 26.9634C8.59926 26.8286 6.0989 26.7073 4.56203 26.3907C3.52224 26.1803 2.61866 25.7132 1.95613 25.0357C1.44408 24.5229 1.03686 23.7406 0.720931 22.6551C0.449928 21.7508 0.34438 20.9985 0.193902 19.1606C-0.0364502 15.0129 -0.0913638 11.6218 0.193902 7.8327C0.429246 5.74027 0.543352 3.25632 2.10661 1.80716C2.84473 1.12894 3.70338 0.692484 4.66758 0.512053C6.17379 0.226074 12.5908 0 19.234 0C25.8621 0 32.2934 0.226074 33.8011 0.512053C35.0056 0.738127 36.1352 1.41563 36.7985 2.28926C38.2248 4.53288 38.2498 7.32279 38.3946 9.50508C38.4545 10.5449 38.4545 16.4492 38.3946 17.489C38.1692 20.9378 37.988 22.1581 37.476 23.4232C37.1594 24.222 36.8891 24.6434 36.4212 25.1106C35.6875 25.8294 34.7521 26.3076 33.7397 26.4813C27.4047 26.9577 22.0253 27.0611 15.9199 26.9634V26.9634ZM25.6211 13.1051C22.0966 11.2217 18.7219 9.47512 15.2723 7.66725V18.4831C18.9023 16.5098 22.7292 14.7019 25.636 13.0902L25.6211 13.1051Z"
+                                          fill="#CD201F"/>
                                 </svg>
 
                             </a>
@@ -415,5 +503,21 @@
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.2cbc9361c9ecfd544601.min.js"></script></body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3vLX6xLcvOXiG46eg01hF9fuhjFu_Mds&callback=initMap&libraries=&v=weekly" async></script>
+<script type="text/javascript">
+    function initMap() {
+        const center = { lat: 46.65061536740131, lng: 32.58484419321732 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            center: center,
+        });
+        const marker = new google.maps.Marker({
+            position: center,
+            map: map,
+        });
+    }
+
+    initMap();
+</script>
+<script type="text/javascript" src="bundle.3bf257fd8bb540729e44.min.js"></script></body>
 </html>
