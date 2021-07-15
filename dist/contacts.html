@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Contacts</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.3bf257fd8bb540729e44.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.b6e6b58ead1931a0a7d6.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -226,6 +226,48 @@
             </div>
         </div>
 
+        <div class="section section-contact-head">
+            <div class="contact-head container">
+                <div class="row align-items-baseline">
+                    <div class="col-md-5">
+                        <p class="contact-head__title title">Our contacts</p>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="contact-head__address">
+                            <span>Main office:</span>
+                            48 Filatova Str., Kherson 73027, Ukraine
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <ul class="contact-head__contacts">
+                            <li class="contact-head__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-clock"></use></svg>
+                                <span class="contact-head__contacts-text">Mon - Fri: 9:00 AM - 5:00 PM</span>
+                            </li>
+
+                            <li class="contact-head__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-phone-gray"></use></svg>
+                                <a href="tel:+380667239111" class="contact-head__contacts-text">+38 (066) 72-39-111</a>
+                            </li>
+
+                            <li class="contact-head__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-phone-gray"></use></svg>
+                                <a href="tel:+380552337579" class="contact-head__contacts-text">+380(552) 33-75-79</a>
+                            </li>
+
+                            <li class="contact-head__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-mail-gray"></use></svg>
+                                <a href="mailto:export@space-cabin.com" class="contact-head__contacts-text">export@space-cabin.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="section section-map">
             <div id="map"></div>
         </div>
@@ -235,75 +277,115 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-wrap">
-                            <div class="contact-info">
-                                <p class="contact-info__title">Contact form</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact-info">
+                                        <p class="contact-info__title">Contact form</p>
 
-                                <div class="contact-info__box">
-                                    <p class="contact-info__box-name">Sales manager:</p>
+                                        <div class="contact-info__box">
+                                            <p class="contact-info__box-name">Sales manager:</p>
+                                            <p class="contact-info__box-text">Roman Makarenko</p>
+                                        </div>
+
+                                        <div class="contact-info__box">
+                                            <p class="contact-info__box-name">Telephone numbers:</p>
+                                            <div class="contact-info__box-contacts">
+                                                <a href="tel:+380667239111" class="contact-info__box-link">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-phone-gray"></use></svg>
+                                                    +380(66) 723-91-11
+                                                </a>
+                                                <a href="tel:+380675527881" class="contact-info__box-link">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-phone-gray"></use></svg>
+                                                    +380(67) 552-78-81
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-info__box">
+                                            <p class="contact-info__box-name">Email:</p>
+                                            <div class="contact-info__box-contacts">
+                                                <a href="mailto:export@space-cabin.com" class="contact-info__box-link">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-mail-gray"></use></svg>
+                                                    export@space-cabin.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="contact-info__box">
-                                    <p class="contact-info__box-name">Telephone numbers:</p>
-                                </div>
+                                <div class="col-md-6">
+                                    <form action="" method="post" class="form">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="d-block">
+                                                    <span class="form__name-input">Name *</span>
+                                                    <input type="text" class="form__input form-control" placeholder="Enter your name">
+                                                </label>
+                                            </div>
 
-                                <div class="contact-info__box">
-                                    <p class="contact-info__box-name">Email:</p>
-                                </div>
-                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="d-block">
+                                                    <span class="form__name-input">Email *</span>
+                                                    <input type="email" class="form__input form-control" placeholder="Enter your email">
+                                                </label>
+                                            </div>
+                                        </div>
 
-                            <form action="" method="post" class="request__form form">
-                                <div class="row form-group">
-                                    <label class="col">
-                                        <span class="form__name-input">Name *</span>
-                                        <input type="text" class="form__input form-control" placeholder="Enter your name">
-                                    </label>
-                                </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="d-block">
+                                                    <span class="form__name-input">Country *</span>
+                                                    <input type="text" class="form__input form-control" placeholder="Enter your country">
+                                                </label>
+                                            </div>
 
-                                <div class="row form-group">
-                                    <label class="col">
-                                        <span class="form__name-input">Email *</span>
-                                        <input type="email" class="form__input form-control" placeholder="Enter your email">
-                                    </label>
-                                </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="d-block">
+                                                    <span class="form__name-input">Telephone number *</span>
+                                                    <input type="tel" class="form__input form-control" placeholder="Enter your phone number">
+                                                </label>
+                                            </div>
+                                        </div>
 
-                                <div class="row form-group">
-                                    <label class="col">
-                                        <span class="form__name-input">Country *</span>
-                                        <input type="text" class="form__input form-control" placeholder="Enter your country">
-                                    </label>
-                                </div>
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <label class="d-block">
+                                                    <span class="form__name-input">Message *</span>
+                                                    <textarea name="form-message" id="user_question" cols="30" rows="10" class="form__input form__input_textarea form-control"
+                                                              placeholder="Tell us what do you want to know"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
 
-                                <div class="row form-group">
-                                    <label class="col">
-                                        <span class="form__name-input">Telephone number *</span>
-                                        <input type="tel" class="form__input form-control" placeholder="Enter your phone number">
-                                    </label>
-                                </div>
-
-                                <div class="row form-group">
-                                    <label class="col">
-                                        <span class="form__name-input">Message *</span>
-                                        <textarea name="form-message" id="user_question" cols="30" rows="10" class="form__input form__input_textarea form-control"
-                                                  placeholder="Tell us what do you want to know"></textarea>
-                                    </label>
-                                </div>
-
-                                <div class="row form-group">
-                                    <label class="col">
-                                        <input type="checkbox" class="d-none">
-                                        <span class="form__check-wrap">
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <label class="col">
+                                                    <input type="checkbox" class="d-none">
+                                                    <span class="form__check-wrap">
                                             <span class="form__check-box"></span>
                                             <span class="form__check-text">I am not a robot</span>
                                         </span>
-                                    </label>
-                                </div>
+                                                </label>
+                                            </div>
+                                        </div>
 
-                                <button type="submit" class="form__submit btn btn-primary btn-block d-flex flex-row flex-wrap justify-content-between">Send a request
-                                    <svg>
-                                        <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
-                                    </svg>
-                                </button>
-                            </form>
+                                        <button type="submit" class="form__submit btn btn-primary btn-block d-flex flex-row flex-wrap justify-content-between">Send a request
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="contact__other-box">
+                            <p class="contact__other-box-name">Warehouse in the EU:</p>
+                            <p class="contact__other-box-text">Damjanich János str 17, Törökbálint, 2045 Hungary</p>
                         </div>
                     </div>
                 </div>
@@ -519,5 +601,5 @@
 
     initMap();
 </script>
-<script type="text/javascript" src="bundle.3bf257fd8bb540729e44.min.js"></script></body>
+<script type="text/javascript" src="bundle.b6e6b58ead1931a0a7d6.min.js"></script></body>
 </html>

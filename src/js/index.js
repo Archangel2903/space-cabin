@@ -1,10 +1,9 @@
 import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
-import 'jquery-ui'
-import 'jquery-ui/ui/effect'
 import 'bootstrap';
 import 'popper.js';
+import 'select2';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -39,6 +38,8 @@ $(function () {
     let body = $('body');
     let toolbar = $('.toolbar');
     let burger = $('.toolbar-menu__switch');
+    let faqToggler = $('.faq__toggler');
+    let select = $('.select-styler');
 
     function bodyLock() {
         if (mqlMax.xxl.matches) {
@@ -98,8 +99,8 @@ $(function () {
         $('body').removeClass('lock');
     });
 
-    if ($('.faq__toggler').length) {
-        $('.faq__toggler').on('click', function () {
+    if (faqToggler.length) {
+        faqToggler.on('click', function () {
             $(this).closest('.faq__box').toggleClass('opened');
             $(this).closest('.faq__box').find('.faq__box-body').stop().slideToggle(300);
         });
@@ -123,6 +124,12 @@ $(function () {
                     height: defaultHeight + 'px',
                 }, 300);
             }
+        });
+    }
+
+    if (select.length) {
+        select.select2({
+            minimumResultsForSearch: Infinity,
         });
     }
 

@@ -245,7 +245,7 @@
 
   &__link {
     padding-bottom: 10px;
-    border-bottom: 1px solid #1f1f1f;
+    border-bottom: 1px solid $text-color;
     font-size: 20px;
     font-weight: 600;
     line-height: 31px;
@@ -417,7 +417,7 @@
       width: 16px;
       height: 2px;
       border-radius: 25px;
-      background: #1f1f1f;
+      background: $text-color;
       transform: translate(-50%, -50%);
       transition: $transition-base;
     }
@@ -1033,6 +1033,56 @@
   }
 }
 
+/* SECTION CONTACT HEAD */
+.section-contact-head {
+  margin: 0 0 60px;
+}
+
+.contact-head {
+  &__title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 73px;
+  }
+
+  &__address {
+    margin: 0 0 90px;
+    font-size: 30px;
+    line-height: 36px;
+
+    span {
+      display: block;
+      margin: 0 0 30px;
+      font-weight: 600;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 0 0 24px;
+    border-bottom: 1px solid #ffffff;
+    margin: 0;
+
+    &-item {
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    &-text {
+      vertical-align: middle;
+    }
+  }
+}
+
 /* SECTION MAP */
 .section-map {
   margin: 0 0 70px;
@@ -1040,4 +1090,140 @@
 
 #map {
   height: 460px;
+}
+
+/* SECTION CONTACT */
+.section-contact {
+  margin: 0 0 120px;
+}
+
+.contact {
+  .form-wrap {
+    margin: 0 0 135px;
+  }
+
+  .form {
+    .form-group {
+      &:not(:last-of-type) {
+        margin: 0 0 40px;
+      }
+    }
+  }
+
+  &__other-box {
+    padding: 0 0 55px;
+    border-bottom: 1px solid #ffffff;
+
+    &-name {
+      margin: 0 0 30px;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 36px;
+    }
+
+    &-text {
+      margin: 0;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
+.contact-info {
+  height: 100%;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  &__title {
+    margin: 0 0 66px;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 46px;
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin: 0 0 60px;
+    }
+
+    &-name {
+      margin: 0 0 30px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+
+    &-text {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+    }
+
+    &-link {
+      display: inline-block;
+      font-weight: 500;
+      line-height: 19px;
+
+      &:not(:last-child) {
+        margin: 0 30px 0 0;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* SECTION PARTNERS */
+.section-partners {}
+
+.partners {
+  &__title {
+    margin: 0 0 40px;
+  }
+
+  .styler-text {
+    margin: 0 0 40px;
+    white-space: pre-line;
+  }
+
+  &__text {
+    padding: 0 0 0 20px;
+    margin: 0 0 50px;
+    font-size: 18px;
+    line-height: 34px;
+    white-space: pre-line;
+
+    &:not(:last-child) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__box {
+    padding: 30px;
+    @extend %bg-easy-blur;
+
+    &-pic {
+
+    }
+
+    &-info {
+
+    }
+  }
+
+  .form-wrap {
+    margin: 0 0 30px;
+  }
 }
