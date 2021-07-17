@@ -1,0 +1,40 @@
+<svg width="160" height="184" viewBox="0 0 160 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        <![CDATA[
+            @keyframes logoAnim {
+                0% {
+                    transform: rotate(360deg) scale(0);
+                }
+
+                100% {
+                    transform: rotate(0deg) scale(1);
+                }
+            }
+
+            #logo {
+                transform-origin: 50% 50%;
+                animation: logoAnim 1s ease 1 alternate;
+            }
+        ]]>
+    </style>
+
+    <defs xmlns="http://www.w3.org/2000/svg">
+        <linearGradient id="a" x1="25%" x2="75%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#39AFFD">
+                <animate attributeName="stop-color" dur="1s" repeatCount="indefinite" values="#39AFFD; #3A76FF; #39AFFD"/>
+            </stop>
+            <stop offset="100%" stop-color="#3A76FF">
+                <animate attributeName="stop-color" dur="1s" repeatCount="indefinite" values="#3A76FF; #39AFFD; #3A76FF"/>
+            </stop>
+        </linearGradient>
+    </defs>
+
+    <g id="logo">
+        <path d="M75.1393 0.00976562L60.1187 9.66009L75.1754 17.7543V0.0459529L75.1393 0.00976562ZM51.7552 14.9678L75.1875 27.5735L75.3076 84.3898L35.3286 59.6608L35.593 25.3177L51.7552 14.9678V14.9678ZM32.8532 68.3099L0 82.4235V99.4201L32.7811 114.74L71.1739 92.0135L32.8412 68.3099H32.8532ZM35.4728 123.244L75.3437 99.6373L75.4518 151.061L51.8994 168.396L35.2925 158.48L35.4728 123.244V123.244ZM59.9264 173.197L75.5479 182.485V161.773L59.9264 173.197ZM23.7086 120.12L0.0240199 134.149V109.034L23.7327 120.12H23.7086ZM5.6838 140.856L26.7969 153.462L26.9291 128.287L5.7439 140.88L5.6838 140.856ZM27.0252 30.7702L8.11116 42.8331L26.8449 54.4135L27.0252 30.7219V30.7702ZM0.0841245 47.996L23.8768 62.7127L0.0480764 72.9662V48.1166L0.0841245 47.996Z" fill="#B3B3B3"/>
+
+        <g fill="url(#a)">
+            <path d="M84.3918 0L84.4399 66.8285L116.488 88.1677L159.82 62.3773L159.868 48.3602L84.3918 0Z"/>
+            <path d="M160 74.1567L84.584 118.717V183.278L159.916 142.939L160 74.1567Z" />
+        </g>
+    </g>
+</svg>
