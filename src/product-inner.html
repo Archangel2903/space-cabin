@@ -817,62 +817,85 @@
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Pastel Orange</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#FF7D38" data-img="<%= require('./img/custom/exterior/ral_2003.png')%>" checked>
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Red flame</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#AB2524" data-img="<%= require('./img/custom/exterior/ral_3000.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Signal violet</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#904684" data-img="<%= require('./img/custom/exterior/ral_4008.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Silver grey</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#8F999F" data-img="<%= require('./img/custom/exterior/ral_7001.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Zink yellow</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#F5CD0B" data-img="<%= require('./img/custom/exterior/ral_1018.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Jet black</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#000000" data-img="<%= require('./img/custom/exterior/ral_9005.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Emerald green</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#28713E" data-img="<%= require('./img/custom/exterior/ral_6001.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Pure white</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#FFFFFF" data-img="<%= require('./img/custom/exterior/ral_9010.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Ultramarine blue</span>
-                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="exterior-toggle" data-color="#2B2C7C" data-img="<%= require('./img/custom/exterior/ral_5002.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
                         </div>
 
                         <div class="product-custom__visually">
-                            <div class="product-custom__visually-exterior"></div>
-                            <div class="product-custom__visually-interior"></div>
+                            <picture class="product-custom__visually-pic">
+                                <img src="<%= require('./img/default.svg') %>" id="exterior" alt="" title="">
+                            </picture>
+
+                            <picture class="product-custom__visually-pic">
+                                <img src="<%= require('./img/default.svg') %>" id="interior" alt="" title="">
+                            </picture>
                         </div>
 
                         <div class="product-custom__switchers product-custom__switchers_interior">
@@ -880,59 +903,82 @@
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Light blue</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#3692C3" data-img="<%= require('./img/custom/interior/light_blue.png')%>" checked>
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Dark red</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#AB2524" data-img="<%= require('./img/custom/interior/red.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Violet</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#904684" data-img="<%= require('./img/custom/interior/violet.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Grey</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#8F999F" data-img="<%= require('./img/custom/interior/grey.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Yellow</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#F5CD0B" data-img="<%= require('./img/custom/interior/yellow.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Black</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#000000" data-img="<%= require('./img/custom/interior/black.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Green</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#28713E" data-img="<%= require('./img/custom/interior/green.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Brown</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#402C23" data-img="<%= require('./img/custom/interior/brown.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
 
                             <label class="product-custom__switcher-wrap">
                                 <span class="product-custom__switcher-name">Blue</span>
-                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle">
-                                <span class="product-custom__switcher"></span>
+                                <input type="radio" class="product-custom__switcher-input" name="interior-toggle" data-color="#2B2C7C" data-img="<%= require('./img/custom/interior/blue.png')%>">
+                                <span class="product-custom__switcher">
+                                    <span class="product-custom__switcher-btn"></span>
+                                </span>
                             </label>
                         </div>
                     </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 text-center"><a href="#more" class="btn-more">Show the exterior colors<svg><use xlink:href="img/spritemap.svg#sprite-download"></use></svg></a></div>
+                    <div class="col-md-6 text-center"><a href="#more" class="btn-more">Show the interior colors<svg><use xlink:href="img/spritemap.svg#sprite-download"></use></svg></a></div>
                 </div>
             </div>
         </div>

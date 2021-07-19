@@ -363,9 +363,6 @@
 
   &__title {
     margin: 0 0 60px;
-    font-size: 38px;
-    font-weight: 600;
-    line-height: 46px;
   }
 
   &__box {
@@ -450,9 +447,6 @@
 .faq-head {
   &__title {
     margin: 0 0 40px;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73px;
   }
 
   .styler-text {
@@ -470,12 +464,12 @@
     margin: 0;
 
     &-item {
-
+      margin: 0 0 30px;
     }
 
     &-link {
-      font-size: 30px;
-      line-height: 48px;
+      font-size: 18px;
+      line-height: 28px;
 
       &:hover {
         .faq-head__contacts-ico {
@@ -624,8 +618,9 @@
   overflow: hidden;
 
   &__box {
+    max-width: 450px;
     padding: 15px;
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
     @extend %bg-easy-blur;
 
     &-pic {
@@ -663,7 +658,7 @@
   }
 
   &.minimized {
-    height: 638px;
+    height: 550px;
   }
 
   &__toggle {
@@ -702,7 +697,7 @@
 }
 
 .latest-news {
-  margin: 0 0 223px;
+  margin: 0 0 100px;
 
   &__box {
 
@@ -715,15 +710,11 @@
   }
 
   &__content {
-    position: absolute;
-    bottom: -110px;
-    left: 50%;
     width: 100%;
     max-width: 930px;
-    padding: 30px;
+    padding: 15px;
     @extend %bg-easy-blur;
     background: rgba(255, 255, 255, 0.75);
-    transform: translate(-50%, 0);
 
     &-footer {
       display: flex;
@@ -815,7 +806,7 @@
 
 /* BREADCRUMBS */
 .section-breadcrumb {
-  margin: 0 0 120px;
+  margin: 0 0 30px;
 }
 
 .breadcrumbs {
@@ -846,9 +837,9 @@
 
   &__name {
     margin: 0 0 50px;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 73px;
+    line-height: 44px;
     text-align: center;
   }
 
@@ -866,22 +857,22 @@
 
     &_lg {
       margin: 0 0 40px;
-      font-size: 30px;
-      line-height: 48px;
+      font-size: 20px;
+      line-height: 36px;
     }
 
     &-quote {
       position: relative;
       max-width: 764px;
-      margin: 60px auto 140px;
-      font-size: 30px;
-      line-height: 55px;
+      margin: 30px auto 80px;
+      font-size: 22px;
+      line-height: 34px;
 
       &::before {
         content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNS45Mjk4IDIuMTg2NTVDMTMuNTQzOSAzLjQwMTMxIDEyLjM1MSA0LjgyODYzIDEyLjM1MSA2LjQ2ODU1QzEzLjM2NzkgNi41OTAwMiAxNC4yMDg4IDcuMDIwMjQgMTQuODczOCA3Ljc1OTIyQzE1LjUzODcgOC40OTgyIDE1Ljg3MTIgOS4zNTM1NyAxNS44NzEyIDEwLjMyNTRDMTUuODcxMiAxMS4zNTc5IDE1LjU0ODUgMTIuMjI4NSAxNC45MDMxIDEyLjkzNzFDMTQuMjU3NyAxMy42NDU3IDEzLjQ0NjEgMTQgMTIuNDY4MyAxNEMxMS4zNzMxIDE0IDEwLjQyNDYgMTMuNTM5NCA5LjYyMjc5IDEyLjYxODJDOC44MjA5NiAxMS42OTcgOC40MjAwNSAxMC41Nzg1IDguNDIwMDUgOS4yNjI0N0M4LjQyMDA1IDUuMzE0NTEgMTAuNTUxNyAyLjIyNzA1IDE0LjgxNTEgMEwxNS45Mjk4IDIuMTg2NTVaTTcuNTA5NzggMi4xODY1NUM1LjEwNDI5IDMuNDAxMzEgMy45MDE1NiA0LjgyODYzIDMuOTAxNTYgNi40Njg1NUM0LjkzODA4IDYuNTkwMDIgNS43ODg3OCA3LjAyMDI0IDYuNDUzNzIgNy43NTkyMkM3LjExODY1IDguNDk4MiA3LjQ1MTExIDkuMzUzNTcgNy40NTExMSAxMC4zMjU0QzcuNDUxMTEgMTEuMzU3OSA3LjEyMzU0IDEyLjIyODUgNi40NjgzOCAxMi45MzcxQzUuODEzMjMgMTMuNjQ1NyA0Ljk5Njc1IDE0IDQuMDE4OSAxNEMyLjkyMzcyIDE0IDEuOTgwMTIgMTMuNTM5NCAxLjE4ODA3IDEyLjYxODJDMC4zOTYwMiAxMS42OTcgMCAxMC41Nzg1IDAgOS4yNjI0N0MwIDUuMzE0NTEgMi4xMjE4OCAyLjIyNzA1IDYuMzY1NzEgMEw3LjUwOTc4IDIuMTg2NTVaIgogICAgICAgICAgZmlsbD0iIzI3NUZBMSIvPgo8L3N2Zz4K);
         position: absolute;
         top: -70px;
-        left: -35px;
+        left: -5px;
         opacity: 0.1;
         transform: scale(4) rotate(-15deg);
       }
@@ -952,9 +943,6 @@
 .services {
   &__title {
     margin: 0 0 40px;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73px;
   }
 
   &__box {
@@ -969,8 +957,8 @@
 
     &-title {
       margin: 0 0 10px;
-      font-size: 30px;
-      line-height: 48px;
+      font-size: 24px;
+      line-height: 34px;
 
       .btn-more {
         padding: 0 0 5px !important;
@@ -1014,9 +1002,6 @@
 .pages-navigation {
   &__title {
     margin: 0 0 45px;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73px;
     white-space: pre-line;
   }
 
@@ -1864,7 +1849,7 @@
 
 /* SECTION PRODUCT CUSTOM */
 .section-product-custom {
-
+  margin: 0 0 120px;
 }
 
 .product-custom {
@@ -1881,6 +1866,7 @@
       align-content: stretch;
       align-items: stretch;
       width: 100%;
+      margin: 0 0 50px;
     }
   }
 
@@ -1910,6 +1896,7 @@
 
     &-title {
       width: 100%;
+      margin: 0 0 30px;
       font-size: 30px;
       font-weight: 600;
       line-height: 36px;
@@ -1920,23 +1907,12 @@
     position: relative;
     width: 48px;
     height: 20px;
+    padding: 2px;
     border-radius: 100px;
     background: #ffffff;
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+    transition: $transition-base;
     cursor: pointer;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 2px;
-      width: 16px;
-      height: 16px;
-      padding: 2px;
-      border-radius: 100%;
-      background: #000000;
-      transform: translateY(-50%);
-    }
 
     &-wrap {
       position: relative;
@@ -1947,19 +1923,101 @@
       align-content: center;
       align-items: center;
       width: 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 20px;
+      }
     }
 
     &-name {
+      font-weight: 500;
+      line-height: 19px;
+    }
 
+    &-btn {
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      transition: $transition-base;
     }
 
     &-input {
       display: none;
+
+      &:checked {
+        &+ .product-custom__switcher {
+          background: #000000;
+
+          .product-custom__switcher-btn {
+            left: 30px;
+            background: #ffffff !important;
+          }
+        }
+      }
     }
   }
 
   &__visually {
+    position: relative;
     width: 50%;
     max-width: 750px;
+
+    &-pic {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      #exterior {
+        width: 208px;
+        height: 415px;
+      }
+
+      #interior {
+        top: 30px;
+        width: 220px;
+        height: 355px;
+      }
+    }
+  }
+
+  .btn-more {
+    position: relative;
+    display: inline-block;
+
+    svg {
+      width: 18px;
+      height: 16px;
+      margin-left: 30px;
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      inset: 10px 0 0;
+      width: 140px;
+      height: 1px;
+      background: #d8d8d8;
+    }
+
+    &::before {
+      right: calc(100% + 30px);
+      left: auto;
+    }
+
+    &::after {
+      right: auto;
+      left: calc(100% + 30px);
+    }
   }
 }

@@ -5,17 +5,7 @@ import 'bootstrap';
 import 'popper.js';
 import 'select2';
 
-$(window).on('load', function () {
-    let b = $('body');
-
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        b.addClass('ios');
-    } else {
-        b.addClass('web');
-    }
-
-    b.removeClass('loaded');
-});
+const body = $('body');
 
 const mqlMin = {
     start: matchMedia('(min-width: 320px)'),
@@ -34,58 +24,143 @@ const mqlMax = {
     xs: matchMedia('(max-width: 394px)'),
 }
 
+$(window).on('load', function () {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        body.addClass('ios');
+    } else {
+        body.addClass('web');
+    }
+
+    body.removeClass('loaded');
+});
+
+const toolbar = $('.toolbar');
+const burger = $('.toolbar-menu__switch');
+
+function bodyLock() {
+    if (mqlMax.xxl.matches) {
+        $('.menu__list-item').each(function (i, e) {
+            let link = $(e).find('.menu__item-link').attr('href');
+            let linkText = $(e).find('.menu__item-link').text();
+
+            $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link replacement">' + linkText + '</a>');
+
+            if ($(e).find('.menu__dropdown').length) {
+                $(e).find('.menu__dropdown .menu__dropdown-item').each(function (i, e) {
+                    let link = $(e).find('.menu__dropdown-link').attr('href');
+                    let linkText = $(e).find('.menu__dropdown-link').text();
+
+                    $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link sub-link replacement">' + linkText + '</a>');
+                });
+            }
+        });
+
+        burger.unbind('click');
+        burger.on('click', function () {
+            body.toggleClass('lock');
+            $(this).toggleClass('opened');
+            $(this).next().toggleClass('opened');
+            toolbar.toggleClass('active');
+        });
+
+        if ($('.toolbar-menu__dropdown').hasClass('opened')) {
+            body.addClass('lock');
+        }
+    }
+    else {
+        burger.unbind('click');
+        burger.on('click', function () {
+            body.removeClass('lock');
+            $(this).toggleClass('opened');
+            $(this).next().toggleClass('opened');
+            toolbar.toggleClass('active');
+        });
+
+        body.removeClass('lock');
+    }
+}
+
+bodyLock();
+
 $(function () {
-    let body = $('body');
-    let toolbar = $('.toolbar');
-    let burger = $('.toolbar-menu__switch');
     let faqToggler = $('.faq__toggler');
     let select = $('.select-styler');
 
-    function bodyLock() {
-        if (mqlMax.xxl.matches) {
-            $('.menu__list-item').each(function (i, e) {
-                let link = $(e).find('.menu__item-link').attr('href');
-                let linkText = $(e).find('.menu__item-link').text();
+    const switcherWrap = $('.product-custom__switcher-wrap'),
+        switcher = $('.product-custom__switcher'),
+        switcherExterior = $('.product-custom__switcher-input[name="exterior-toggle"]').next(),
+        switcherInterior = $('.product-custom__switcher-input[name="interior-toggle"]').next();
 
-                $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link replacement">' + linkText + '</a>');
+    if (switcherWrap.length) {
+        switcher.each(function (i, e) {
+            let button = $(e).find('.product-custom__switcher-btn'),
+                input = $(e).prev('.product-custom__switcher-input'),
+                color = String(input.data('color')).toLowerCase(),
+                imgSrc = input[0].dataset.img,
+                imgExterior = $('#exterior'),
+                imgInterior = $('#interior');
 
-                if ($(e).find('.menu__dropdown').length) {
-                    $(e).find('.menu__dropdown .menu__dropdown-item').each(function (i, e) {
-                        let link = $(e).find('.menu__dropdown-link').attr('href');
-                        let linkText = $(e).find('.menu__dropdown-link').text();
+            button.css('background', color);
 
-                        $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link sub-link replacement">' + linkText + '</a>');
-                    });
+            if (input[0].checked) {
+
+                $(e).css('background', color);
+
+                switch (input.attr('name')) {
+                    case 'exterior-toggle':
+                        imgExterior.attr('src', imgSrc);
+                        break;
+
+                    case 'interior-toggle':
+                        imgInterior.attr('src', imgSrc);
+                        break;
                 }
-            });
-
-            burger.unbind('click');
-            burger.on('click', function () {
-                body.toggleClass('lock');
-                $(this).toggleClass('opened');
-                $(this).next().toggleClass('opened');
-                toolbar.toggleClass('active');
-            });
-
-            if ($('.toolbar-menu__dropdown').hasClass('opened')) {
-                body.addClass('lock');
             }
-        }
-        else {
-            burger.unbind('click');
-            burger.on('click', function () {
-                body.removeClass('lock');
-                $(this).toggleClass('opened');
-                $(this).next().toggleClass('opened');
-                toolbar.toggleClass('active');
-            });
 
-            body.removeClass('lock');
-        }
+            if (color === '#ffffff') {
+                button.css({
+                    'border': '1px solid rgba(0, 0, 0, .75)'
+                });
+            }
+        });
+
+        switcher.on('click', function () {
+            let btn = $(this).find('.product-custom__switcher-btn'),
+                input = $(this).prev(),
+                color = String(input.data('color')).toLowerCase(),
+                imgSrc = input.data('img'),
+                imgExterior = $('#exterior'),
+                imgInterior = $('#interior');
+
+            switch (input.attr('name')) {
+                case 'exterior-toggle':
+                    imgExterior.attr('src', imgSrc);
+                    switcherExterior.css('background', '#ffffff');
+                    break;
+
+                case 'interior-toggle':
+                    imgInterior.attr('src', imgSrc);
+                    switcherInterior.css('background', '#ffffff');
+                    break;
+
+                default:
+                    let otherSwitcher = $('.product-custom__switcher-input[name="' + input.attr('name') + '"]').next();
+                    otherSwitcher.css('background', '#ffffff');
+                    break;
+            }
+
+            if (color !== '#ffffff') {
+                $(this).css('background', color);
+                btn.css('background', color);
+            }
+            else {
+                $(this).css('background', 'rgba(0, 0, 0, 1)');
+                btn.css('background', color);
+            }
+        });
     }
 
     mqlMax.xxl.addListener(bodyLock);
-    bodyLock();
 
     toolbar.on('click', function (e) {
         e.stopPropagation();
@@ -108,8 +183,8 @@ $(function () {
 
     if ($('.blog__toggle-button').length) {
         let defaultHeight = $('.blog.minimized').height();
-        $('.blog__toggle-button').on('click', function () {
 
+        $('.blog__toggle-button').on('click', function () {
             $(this).toggleClass('opened');
 
             if ($(this).hasClass('opened')) {
