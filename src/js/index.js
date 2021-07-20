@@ -39,21 +39,23 @@ const burger = $('.toolbar-menu__switch');
 
 function bodyLock() {
     if (mqlMax.xxl.matches) {
-        $('.menu__list-item').each(function (i, e) {
-            let link = $(e).find('.menu__item-link').attr('href');
-            let linkText = $(e).find('.menu__item-link').text();
+        if ($('.toolbar-menu__dropdown-link.replacement').length <= 0) {
+            $('.menu__list-item').each(function (i, e) {
+                let link = $(e).find('.menu__item-link').attr('href');
+                let linkText = $(e).find('.menu__item-link').text();
 
-            $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link replacement">' + linkText + '</a>');
+                $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link replacement">' + linkText + '</a>');
 
-            if ($(e).find('.menu__dropdown').length) {
-                $(e).find('.menu__dropdown .menu__dropdown-item').each(function (i, e) {
-                    let link = $(e).find('.menu__dropdown-link').attr('href');
-                    let linkText = $(e).find('.menu__dropdown-link').text();
+                if ($(e).find('.menu__dropdown').length) {
+                    $(e).find('.menu__dropdown .menu__dropdown-item').each(function (i, e) {
+                        let link = $(e).find('.menu__dropdown-link').attr('href');
+                        let linkText = $(e).find('.menu__dropdown-link').text();
 
-                    $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link sub-link replacement">' + linkText + '</a>');
-                });
-            }
-        });
+                        $('.toolbar-menu__dropdown').append('<a href="' + link + '" class="toolbar-menu__dropdown-link sub-link replacement">' + linkText + '</a>');
+                    });
+                }
+            });
+        }
 
         burger.unbind('click');
         burger.on('click', function () {

@@ -363,6 +363,9 @@
 
   &__title {
     margin: 0 0 60px;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
   }
 
   &__box {
@@ -480,8 +483,8 @@
 
     &-ico {
       display: inline-block;
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       padding: 3px 0;
       border: 1px solid #ffffff;
       border-radius: 100%;
@@ -1025,14 +1028,12 @@
 
 .contact-head {
   &__title {
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73px;
+    margin: 0 0 30px;
   }
 
   &__address {
-    margin: 0 0 90px;
-    font-size: 30px;
+    margin: 0 0 40px;
+    font-size: 22px;
     line-height: 36px;
 
     span {
@@ -1044,20 +1045,22 @@
 
   &__contacts {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    padding: 0 0 24px;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 0 0 15px;
     border-bottom: 1px solid #ffffff;
     margin: 0;
 
     &-item {
+      margin-bottom: 20px;
+
       svg {
         width: 24px;
         height: 24px;
-        margin-right: 20px;
+        margin-right: 10px;
         vertical-align: middle;
       }
     }
@@ -1084,7 +1087,7 @@
 
 .contact {
   .form-wrap {
-    margin: 0 0 135px;
+    margin: 0 auto 135px;
   }
 
   .form {
@@ -1101,14 +1104,14 @@
 
     &-name {
       margin: 0 0 30px;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 600;
       line-height: 36px;
     }
 
     &-text {
       margin: 0;
-      font-size: 30px;
+      font-size: 22px;
       line-height: 36px;
     }
   }
@@ -1154,6 +1157,7 @@
 
     &-link {
       display: inline-block;
+      font-size: 14px;
       font-weight: 500;
       line-height: 19px;
 
@@ -1162,6 +1166,7 @@
       }
 
       svg {
+        display: none;
         width: 24px;
         height: 24px;
         margin-right: 10px;
@@ -1199,7 +1204,7 @@
 
   &__box {
     height: 548px;
-    padding: 30px;
+    padding: 15px;
     margin: 0 0 30px;
     @extend %bg-easy-blur;
 
@@ -1235,7 +1240,8 @@
   }
 
   .form-wrap {
-    margin: 0 0 30px;
+    max-width: none;
+    margin: 0 auto 30px;
   }
 }
 
@@ -1260,22 +1266,13 @@
 
   &__box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: stretch;
     align-items: stretch;
     margin: 0 0 60px;
     @extend %bg-easy-blur;
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-
-      .product__info {
-        border: none;
-        border-left: 1px solid #ffffff;
-      }
-    }
   }
 
   &__name {
@@ -1291,7 +1288,7 @@
   }
 
   &__info {
-    width: 50%;
+    width: 100%;
     border-right: 1px solid #ffffff;
 
     &-top {
@@ -1305,7 +1302,7 @@
 
     &-title {
       margin: 0 0 20px;
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 600;
       line-height: 36px;
     }
@@ -1343,13 +1340,13 @@
   &__pic {
     position: relative;
     display: block;
-    width: 50%;
+    width: 100%;
 
     img {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      transform: translateY(15%);
     }
   }
 }
@@ -1361,9 +1358,7 @@
 
 .products {
   &__title {
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73px;
+    margin: 0 0 20px;
   }
 
   &__subtitle {
@@ -1400,11 +1395,12 @@
     }
 
     &-pic {
+      display: block;
+
       img {
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: block;
+        width: 100%;
+        margin: 0 auto -100px;
       }
     }
 
@@ -1462,9 +1458,9 @@
   }
 
   &__title {
-    font-size: 60px;
+    margin: 0 0 30px;
+    font-size: 36px;
     font-weight: 600;
-    line-height: 83px;
   }
 
   .styler-text {
@@ -1482,15 +1478,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: stretch;
     align-items: stretch;
   }
 
   &__pic {
+    margin: 0 0 20px;
+
     img {
-      width: 450px;
-      height: 450px;
+      width: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -1535,7 +1533,6 @@
     &-info {
       flex: 1 1 50%;
       padding: 30px;
-      border-right: 1px solid #ffffff;
     }
 
     &-year {
@@ -1579,7 +1576,7 @@
       align-content: stretch;
       align-items: stretch;
       height: 100%;
-      padding: 0 60px;
+      padding: 30px;
       margin: 0;
       font-size: 18px;
       line-height: 32px;
@@ -1599,17 +1596,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: stretch;
-    align-items: stretch;
+    align-content: center;
+    align-items: center;
     border: 1px solid #ffffff;
     @extend %bg-easy-blur;
   }
 
   &__title {
     margin: 0 0 40px;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73px;
   }
 
   &__description {
@@ -1619,8 +1613,8 @@
     justify-content: center;
     align-content: flex-start;
     align-items: flex-start;
-    width: 72%;
-    padding: 30px 60px;
+    width: 100%;
+    padding: 30px;
     border-right: 1px solid #ffffff;
 
     .styler-text {
@@ -1629,11 +1623,13 @@
   }
 
   &__pic {
-    width: 28%;
+    width: 100%;
     padding: 16px;
 
     img {
-      width: 100%;
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
     }
   }
 }
@@ -1650,7 +1646,7 @@
 
   &__wrap {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: stretch;
@@ -1661,10 +1657,10 @@
 
   &__info {
     flex: 1 1 50%;
-    border-right: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
 
     &-box {
-      padding: 30px;
+      padding: 15px;
 
       &:not(:last-child) {
         border-bottom: 1px solid #ffffff;
@@ -1674,7 +1670,9 @@
         margin-top: 80px;
 
         .btn {
-          width: 100%;
+          &-more {
+            display: inline-block;
+          }
         }
       }
     }
@@ -1860,35 +1858,30 @@
   &__box {
     &-wrap {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      align-content: stretch;
-      align-items: stretch;
+      align-content: center;
+      align-items: center;
       width: 100%;
-      margin: 0 0 50px;
+      margin: 0 auto 50px;
     }
   }
 
   &__switchers {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: flex-start;
     align-items: flex-start;
-    width: 25%;
-    max-width: 330px;
+    width: 100%;
 
     &_exterior {
 
     }
 
     &_interior {
-      .product-custom__switchers-title {
-        text-align: right;
-      }
-
       .product-custom__switcher-wrap {
         flex-direction: row-reverse;
       }
@@ -1922,14 +1915,14 @@
       justify-content: space-between;
       align-content: center;
       align-items: center;
-      width: 100%;
 
       &:not(:last-child) {
-        margin: 0 0 20px;
+        margin: 0 20px 20px 0;
       }
     }
 
     &-name {
+      display: none;
       font-weight: 500;
       line-height: 19px;
     }
@@ -1965,6 +1958,7 @@
     position: relative;
     width: 50%;
     max-width: 750px;
+    min-height: 415px;
 
     &-pic {
       position: absolute;
