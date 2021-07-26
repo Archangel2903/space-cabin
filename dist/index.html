@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.bffb0f8fab4aff5399db.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.02506bcc1eea8a1b547c.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -242,7 +242,7 @@
                         <p class="section-head__text styler-text">Use new technologies and join the winners</p>
 
                         <div class="row">
-                            <div class="col-sm-auto mb-4 mb-sm-0 text-center text-sm-left">
+                            <div class="col-sm-auto mb-4 mb-sm-0 text-center text-sm-left" data-toggle="modal" data-target="#modal_form">
                                 <button type="button" class="btn-lg btn-primary">Request your price
                                     <svg>
                                         <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
@@ -475,7 +475,7 @@
                             chamber</p>
                         <div class="row">
                             <div class="col-auto">
-                                <button class="btn-lg btn-primary">Request your price
+                                <button class="btn-lg btn-primary" data-toggle="modal" data-target="#modal_form">Request your price
                                     <svg>
                                         <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
                                     </svg>
@@ -1283,9 +1283,83 @@
     <!-- FOOTER END -->
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="modal_form" tabindex="-1" role="dialog" aria-labelledby="formModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <form action="" method="post" class="form mt-5 mt-xl-0">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="d-block">
+                                <span class="form__name-input">Name *</span>
+                                <input type="text" class="form__input form-control" placeholder="Enter your name">
+                            </label>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="d-block">
+                                <span class="form__name-input">Email *</span>
+                                <input type="email" class="form__input form-control" placeholder="Enter your email">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="d-block">
+                                <span class="form__name-input">Country *</span>
+                                <input type="text" class="form__input form-control" placeholder="Enter your country">
+                            </label>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="d-block">
+                                <span class="form__name-input">Telephone number *</span>
+                                <input type="tel" class="form__input form-control" placeholder="Enter your phone number">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label class="d-block">
+                                <span class="form__name-input">Message *</span>
+                                <textarea name="form-message" id="user_question" cols="30" rows="10" class="form__input form__input_textarea form-control"
+                                          placeholder="Tell us what do you want to know"></textarea>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label class="col">
+                                <input type="checkbox" class="d-none">
+                                <span class="form__check-wrap">
+                                            <span class="form__check-box"></span>
+                                            <span class="form__check-text">I am not a robot</span>
+                                        </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="form__submit btn btn-primary btn-block d-flex flex-row flex-wrap justify-content-between">Send a request
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="icon-load">
     <picture><img src="img/logo-preload.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.bffb0f8fab4aff5399db.min.js"></script></body>
+<script type="text/javascript" src="bundle.02506bcc1eea8a1b547c.min.js"></script></body>
 </html>

@@ -436,3 +436,23 @@
 
   }
 }
+
+.modal {
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    overflow: hidden;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &-body {
+    padding: 30px;
+  }
+}
