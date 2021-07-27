@@ -190,13 +190,11 @@ $(function () {
             $(this).toggleClass('opened');
 
             if ($(this).hasClass('opened')) {
-                $(this).html('Show less <svg><use xlink:href="img/spritemap.svg#sprite-arrow_black"></use></svg>');
                 $('.blog.minimized').stop().animate({
                     height: $('.blog.minimized')[0].scrollHeight + 'px',
                 }, 300);
             }
             else {
-                $(this).html('Show more <svg><use xlink:href="img/spritemap.svg#sprite-arrow_black"></use></svg>');
                 $('.blog.minimized').stop().animate({
                     height: defaultHeight + 'px',
                 }, 300);
