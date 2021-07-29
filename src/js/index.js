@@ -85,9 +85,6 @@ function bodyLock() {
 bodyLock();
 
 $(function () {
-    let faqToggler = $('.faq__toggler');
-    let select = $('.select-styler');
-
     const switcherWrap = $('.product-custom__switcher-wrap'),
         switcher = $('.product-custom__switcher'),
         switcherExterior = $('.product-custom__switcher-input[name="exterior-toggle"]').next(),
@@ -176,6 +173,7 @@ $(function () {
         $('body').removeClass('lock');
     });
 
+    let faqToggler = $('.faq__toggler');
     if (faqToggler.length) {
         faqToggler.on('click', function () {
             $(this).closest('.faq__box').toggleClass('opened');
@@ -202,11 +200,14 @@ $(function () {
         });
     }
 
+    /*
+    let select = $('.select-styler');
     if (select.length) {
         select.select2({
             minimumResultsForSearch: Infinity,
         });
     }
+    */
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
