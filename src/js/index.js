@@ -228,3 +228,69 @@ $(function () {
         });
     }
 });
+
+/*
+$(function () {
+    let select = $('.select-styler');
+    if (select.length) {
+        select.select2({
+            minimumResultsForSearch: Infinity,
+        });
+    }
+
+    select.on('change', function () {
+        let region = $('#region');
+        let regionValue = region.val();
+        let country = $('#country');
+        let countryValue = country.val();
+        let partnerBlock = $('.wrap-partner');
+
+        if ($(this).attr('id') === 'region') {
+            partnerBlock.each(function (i, e) {
+                console.log(regionValue);
+
+                if (regionValue === 'show-all') {
+                    $(e).css('display', 'block');
+                }
+                else if ($(e).data('region') !== regionValue) {
+                    $(e).css('display', 'none');
+                }
+                else {
+                    $(e).css('display', 'block');
+                }
+            });
+        }
+        else if ($(this).attr('id') === 'country') {
+            console.log(countryValue);
+
+            partnerBlock.each(function (i, e) {
+                if (countryValue === 'show-all') {
+                    if (regionValue === 'show-all') {
+                        $(e).css('display', 'block');
+                    }
+                    else if ($(e).data('region') !== regionValue) {
+                        $(e).css('display', 'none');
+                    }
+                    else {
+                        $(e).css('display', 'block');
+                    }
+                }
+                else if ($(e).data('country') !== countryValue) {
+                    $(e).css('display', 'none');
+                }
+                else {
+                    if (regionValue === 'show-all') {
+                        $(e).css('display', 'block');
+                    }
+                    else if ($(e).data('region') !== regionValue) {
+                        $(e).css('display', 'none');
+                    }
+                    else {
+                        $(e).css('display', 'block');
+                    }
+                }
+            });
+        }
+    });
+});
+*/
