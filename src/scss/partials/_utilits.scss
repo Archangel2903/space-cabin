@@ -456,3 +456,33 @@
     padding: 30px;
   }
 }
+
+#to_top {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: white;
+  transform: rotate3d(1, 0, 0, 90deg);
+  transition: $transition-base;
+  cursor: pointer;
+  z-index: 3;
+
+  &.show {
+    transform: rotate3d(0, 0, 0, 90deg);
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: $link-hover;
+  }
+}

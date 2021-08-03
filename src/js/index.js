@@ -81,7 +81,6 @@ function bodyLock() {
         body.removeClass('lock');
     }
 }
-
 bodyLock();
 
 $(function () {
@@ -208,6 +207,23 @@ $(function () {
         });
     }
     */
+
+    /* To top button */
+    const scrollTop = $('#to_top');
+    scrollTop.on('click', () => {
+        $('html, body').stop().animate({
+            scrollTop: 0,
+        }, 750);
+    });
+
+    $(window).on('scroll', () => {
+        if (window.pageYOffset > 800) {
+            scrollTop.addClass('show');
+        }
+        else {
+            scrollTop.removeClass('show');
+        }
+    });
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
