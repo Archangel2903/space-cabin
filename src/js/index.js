@@ -172,9 +172,9 @@ $(function () {
         $('body').removeClass('lock');
     });
 
-    let faqToggler = $('.faq__toggler');
-    if (faqToggler.length) {
-        faqToggler.on('click', function () {
+    let faqToggle = $('.faq__question, .faq__toggler');
+    if (faqToggle.length) {
+        faqToggle.on('click', function () {
             $(this).closest('.faq__box').toggleClass('opened');
             $(this).closest('.faq__box').find('.faq__box-body').stop().slideToggle(300);
         });
