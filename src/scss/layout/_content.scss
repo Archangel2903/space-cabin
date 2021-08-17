@@ -1346,6 +1346,8 @@
     img {
       display: block;
       width: 100%;
+      max-width: 250px;
+      max-height: 400px;
       margin: 0 auto;
       transform: translateY(15%);
     }
@@ -1734,9 +1736,12 @@
 
     img {
       position: absolute;
-      top: 68%;
+      top: 50%;
       left: 50%;
-      height: 400px;
+      width: 100%;
+      max-width: 200px;
+      height: 100%;
+      padding-top: 30px;
       transform: translate(-50%, -50%);
     }
   }
