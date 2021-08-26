@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'popper.js';
 import 'select2';
+import 'lightgallery.js';
 
 const body = $('body');
 
@@ -172,6 +173,15 @@ $(function () {
         $('body').removeClass('lock');
     });
 
+    /* lightgallery */
+    let galleryWrap = $('#lightgallery');
+    if (galleryWrap.length) {
+        lightGallery(document.getElementById('lightgallery'), {
+            download: false,
+            selector: '.product-card__pic-wrap',
+        });
+    }
+
     let faqToggle = $('.faq__question, .faq__toggler');
     if (faqToggle.length) {
         faqToggle.on('click', function () {
@@ -208,7 +218,7 @@ $(function () {
     }
     */
 
-    /* To top button */
+    // To top button
     const scrollTop = $('#to_top');
     scrollTop.on('click', () => {
         $('html, body').stop().animate({
@@ -244,69 +254,3 @@ $(function () {
         });
     }
 });
-
-/*
-$(function () {
-    let select = $('.select-styler');
-    if (select.length) {
-        select.select2({
-            minimumResultsForSearch: Infinity,
-        });
-    }
-
-    select.on('change', function () {
-        let region = $('#region');
-        let regionValue = region.val();
-        let country = $('#country');
-        let countryValue = country.val();
-        let partnerBlock = $('.wrap-partner');
-
-        if ($(this).attr('id') === 'region') {
-            partnerBlock.each(function (i, e) {
-                console.log(regionValue);
-
-                if (regionValue === 'show-all') {
-                    $(e).css('display', 'block');
-                }
-                else if ($(e).data('region') !== regionValue) {
-                    $(e).css('display', 'none');
-                }
-                else {
-                    $(e).css('display', 'block');
-                }
-            });
-        }
-        else if ($(this).attr('id') === 'country') {
-            console.log(countryValue);
-
-            partnerBlock.each(function (i, e) {
-                if (countryValue === 'show-all') {
-                    if (regionValue === 'show-all') {
-                        $(e).css('display', 'block');
-                    }
-                    else if ($(e).data('region') !== regionValue) {
-                        $(e).css('display', 'none');
-                    }
-                    else {
-                        $(e).css('display', 'block');
-                    }
-                }
-                else if ($(e).data('country') !== countryValue) {
-                    $(e).css('display', 'none');
-                }
-                else {
-                    if (regionValue === 'show-all') {
-                        $(e).css('display', 'block');
-                    }
-                    else if ($(e).data('region') !== regionValue) {
-                        $(e).css('display', 'none');
-                    }
-                    else {
-                        $(e).css('display', 'block');
-                    }
-                }
-            });
-        }
-    });
-});
-*/
