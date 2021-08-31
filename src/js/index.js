@@ -4,7 +4,6 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'popper.js';
 import 'select2';
-import 'lightgallery.js';
 
 const body = $('body');
 
@@ -172,15 +171,6 @@ $(function () {
         burger.next().removeClass('opened');
         $('body').removeClass('lock');
     });
-
-    /* lightgallery */
-    let galleryWrap = $('#lightgallery');
-    if (galleryWrap.length) {
-        lightGallery(document.getElementById('lightgallery'), {
-            download: false,
-            selector: '.product-card__pic-wrap',
-        });
-    }
 
     let faqToggle = $('.faq__question, .faq__toggler');
     if (faqToggle.length) {
