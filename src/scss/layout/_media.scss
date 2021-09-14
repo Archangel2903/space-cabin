@@ -34,7 +34,8 @@
     &__box {
       &-pic {
         img {
-          width: auto;
+          max-width: 500px;
+          height: 370px;
         }
       }
     }
@@ -574,7 +575,7 @@
       &-pic {
         img {
           position: absolute;
-          top: 75%;
+          top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
