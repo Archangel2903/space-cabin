@@ -76,8 +76,8 @@
   .header-content {
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
+    align-items: center;
+    align-content: center;
     padding: 0;
   }
 
@@ -238,6 +238,10 @@
   }
 
   /* HEADER */
+  .menu {
+    display: inline-flex;
+  }
+
   .toolbar {
     &::before {
       right: 0;
@@ -659,6 +663,11 @@
 }
 
 @include media-breakpoint-up(xl) {
+  .menu {
+    order: 0;
+    padding: 0 15px;
+  }
+
   .form-wrap {
     max-width: none;
     margin: 0;
@@ -847,7 +856,6 @@
 @include media-breakpoint-up(xxl) {
   /* HEADER */
   .header-content {
-    justify-content: flex-start;
     padding: 0;
   }
 

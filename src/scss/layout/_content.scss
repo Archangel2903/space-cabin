@@ -554,10 +554,13 @@
   &__content {
     position: relative;
     max-width: 440px;
+    max-height: 244px;
     padding: 20px;
     margin: 0;
     background: #ffffff;
     box-shadow: 8px 17px 23px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    overflow-y: auto;
 
     &::before {
       content: '';
