@@ -238,10 +238,6 @@
   }
 
   /* HEADER */
-  .menu {
-    display: inline-flex;
-  }
-
   .toolbar {
     &::before {
       right: 0;
@@ -465,6 +461,15 @@
     }
   }
 
+  .menu {
+    display: inline-flex;
+
+    &__list {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
   .section-breadcrumb {
     margin: 0 0 120px;
   }
@@ -666,7 +671,6 @@
   .menu {
     justify-content: flex-start;
     width: 100%;
-    padding: 0 15px;
   }
 
   .form-wrap {
@@ -865,6 +869,11 @@
     display: inline-flex;
     width: auto;
     padding: 52px 20px 52px 49px;
+
+    &__list {
+      width: auto;
+      justify-content: flex-start;
+    }
   }
 
   .toolbar {
