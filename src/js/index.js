@@ -226,7 +226,7 @@ $(function () {
     });
 
     // Lazy load observer
-    /*const imagesAll = document.querySelectorAll('img[data-src]');
+    const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.intersectionRatio >= 0 && entry.target.hasAttribute('data-src')) {
@@ -242,5 +242,5 @@ $(function () {
         imagesAll.forEach(function (image) {
             imgObserve.observe(image);
         });
-    }*/
+    }
 });
